@@ -12,16 +12,6 @@ require 'test/unit/assertions'
 include Test::Unit::Assertions
 
 
-=begin
-require 'webrat'
-require 'webrat/core/matchers'
-
-Webrat.configure do |config|
-  config.mode = :rails
-  config.open_error_files = false # Set to true if you want error pages to pop up in the browser
-end
-=end
-
 if ENV['SAFARIWATIR']
   require 'safariwatir'
   Browser = Watir::Safari
@@ -57,5 +47,7 @@ end
 
 Before do
   @browser = browser
+  @random = rand(9999999).to_s
+  @environment = "http://hs/"
 end
 

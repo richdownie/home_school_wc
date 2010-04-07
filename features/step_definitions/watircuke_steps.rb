@@ -50,7 +50,7 @@ Given /^I submit the form "([^\"]*)"$/ do |form_name|
 end
 
 Given /^I am on (.+)$/ do |page_name|
-  find_page(page_name)
+  @browser.goto(path_to(page_name)) 
 end
 
 Given /I upload "(.*)" to the "(.*)" file field/ do |file, type|
@@ -67,5 +67,5 @@ end
 
 Then /I am redirected to "(.*)"/ do |text|
   url = @browser.url
-  assert_equal(@base_url + text, url)
+  assert_equal(@root_url + text, url)
 end
