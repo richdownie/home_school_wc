@@ -48,6 +48,6 @@ end
 Before do
   @browser = browser
   @random = rand(9999999).to_s
-  @environment = "http://hs/"
+  @environment = "http://www.google.com"
 end
 
