@@ -3,6 +3,9 @@ module Paths
     case page_name
     when /the news page/i
         @environment + "/news?sa=N&hl=en&tab=ln&q="
+        
+    when /the home page/i
+        @environment + "/"
     end
   end
 end
